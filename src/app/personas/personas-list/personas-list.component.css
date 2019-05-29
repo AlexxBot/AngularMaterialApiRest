@@ -1,0 +1,7 @@
+.personas-actions {
+    margin-top:20px;
+}
+.personas-container {
+    overflow: auto;
+    height: 400px;
+}
