@@ -46,7 +46,8 @@ export class PersonaNewComponent implements OnInit {
     this.dateCtrl = new FormControl('',[Validators.required ]);*/
   }
 
-  insertarPersona(dataPersona){
+  insertarPersona(){
+    console.log(this.personaData);
     this.personasService.createPersona(this.personaData).subscribe((data:{}) =>{
       this.router.navigate(['/personas'])
     });

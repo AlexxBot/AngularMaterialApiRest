@@ -19,7 +19,8 @@
         <input matInput placeholder="telefono" [(ngModel)]="personaData.telefono" formControlName="telefonoFormControl">
       </mat-form-field>   
       <mat-form-field class="full-width">
-        <input matInput placeholder="email" [(ngModel)]="personaData.email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+        <!-- <input matInput placeholder="email" [(ngModel)]="personaData.email" [formControl]="emailFormControl" [errorStateMatcher]="matcher"> -->
+        <input matInput placeholder="email" [(ngModel)]="personaData.email" [formControl]="emailFormControl">
         <mat-hint align="end">email@domain.com</mat-hint>
         <mat-error align="end" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
           Please enter a valid email address
@@ -39,6 +40,7 @@
   <mat-card-actions>
     <!--<button mat-raised-button color="primary" (click)="openRepDialog()">Save</button>-->
     <!--<button mat-raised-button color="primary" (click)="openUndoSnackBar()">Save</button>-->
+    <!-- <button mat-raised-button color="primary" [disabled]="!personaFormControl.valid" (click)="insertarPersona()">Save</button> -->
     <button mat-raised-button color="primary" [disabled]="!personaFormControl.valid" (click)="insertarPersona()">Save</button>
   </mat-card-actions>
 </mat-card>
