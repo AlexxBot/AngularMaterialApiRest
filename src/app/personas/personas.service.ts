@@ -9,7 +9,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class PersonasService {
 
-  apiPersonasURL = 'http://192.168.1.66:3000/personas/';
+  apiPersonasURL = 'http://localhost:3000/personas/';
 
   constructor(private httpClient: HttpClient) {
     console.log('persona service is working');
